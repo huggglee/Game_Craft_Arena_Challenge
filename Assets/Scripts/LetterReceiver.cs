@@ -11,4 +11,15 @@ public class LetterReceiver : MonoBehaviour
     {
         return ownerLetter != null;
     }
+    public void ReceiveLetter(Letter letter)
+    {
+        if (!HasLetter() && letter.destination == id)
+        {
+            ownerLetter = letter;
+        }
+        else
+        {
+            Debug.Log("Khong gui duoc thu");
+        }
+    }
 }
